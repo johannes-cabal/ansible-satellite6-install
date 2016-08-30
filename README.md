@@ -37,10 +37,10 @@ If running satellite.yml directly from the role directory, make update hosts.tar
 If intended for use with other roles, include the role in a playbook located at your top level Ansible directory.
 
 Example: [ansible_directory]/playbook.yml
-- name: This is an example playbook
-  hosts: desired_hostname
-  roles:
-    - include: satellit6-install
+#- name: This is an example playbook
+#  hosts: desired_hostname
+#  roles:
+#    - include: satellite6-install
 
 License
 -------
@@ -51,4 +51,5 @@ Author Information
 ------------------
 
 Josh Springer <springer@redhat.com> 
+
 [GitHub](https://github.com/jdspringr07)
