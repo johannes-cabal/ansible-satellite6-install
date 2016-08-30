@@ -1,0 +1,9 @@
+---
+#Install the base software
+- name: Install Satellite and Additional Packages
+  become: yes
+  yum:
+    name: "{{ item }}"
+    state: latest
+  with_items:
+    - "{{ needed_software }}" 

@@ -53,6 +53,19 @@ firewall_ports:
   - 68/udp
   - 69/udp
 
+# List of software needed for installation.
+# Added another line if there are  additional packages
+# you would like to install.
+
+needed_software:
+  - satellite
+  - wget
+  - git
+  - net-tools
+  - bash-completion
+  - screen
+  - vim-*
+
 # List of repositories to be added into redhat.repo
 repositories:
   - { product_name: 'Red Hat Enterprise Linux Server', name_repo: 'Red Hat Enterprise Linux 7 Server (Kickstart)', rel: '7Server', architecture: 'x86_64', state: enable}
