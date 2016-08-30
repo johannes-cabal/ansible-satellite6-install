@@ -1,4 +1,4 @@
-Role Name
+satellite6-installer
 =========
 
 This role is to install and provide basic configuration of Red Hat Satellite 6.2+ on a RHEL 7+ machine. 
