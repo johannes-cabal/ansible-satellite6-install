@@ -1,0 +1,35 @@
+---
+- name: firewall and hostname | Install Firewalld
+  yum:
+    name: firewalld
+    state: present
+  ignore_errors: yes
+  tags:
+    - firewalld
+
+- name: firewall and hostname | Enable and Start Firewalld
+  service:
+    name: firewalld
+    enabled: yes
+    state: started 
+  tags:
+    - firewalld
+
+- name: firewall and hostname | Set hostname
+  hostname: 
+    name: "{{ hostname_full }}"
+
+- name: firewall and hostname | Add hostname to /etc/hosts
+  lineinfile:
+    dest: /etc/hosts
+    line: "{{ ip_address_sat }} {{ hostname_full }} {{ hostname_short }}"
+  tags:
+    - hostname
+
+- name: firewall and hostname | Open ports via Firewalld
+  firewalld:
+    port: "{{ item }}"
+    permanent: yes
+    state: enabled
+  with_items: 
+    - "{{ firewall_ports }}" 
