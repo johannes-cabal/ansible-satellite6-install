@@ -23,10 +23,6 @@
 
 #Enabling the repos
 - name: rhn | enabling the right repos
-  command: /usr/bin/subscription-manager repos --disable "*" --enable rhel-7-server-satellite-6.1-rpms --enable rhel-7-server-rpms --enable rhel-server-rhscl-7-rpms
+  command: /usr/bin/subscription-manager repos --disable "*" --enable rhel-7-server-satellite-6.2-rpms --enable rhel-7-server-rpms --enable rhel-server-rhscl-7-rpms
   tags:
     - rhn
-
-- name: rhn | clean out metadata from repos
-  command: /usr/bin/yum clean all
-  changed_when: False
