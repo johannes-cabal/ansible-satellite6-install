@@ -1,5 +1,5 @@
 ---
-- name: rhn | Register Satellite
+- name: registration | Register Satellite
   redhat_subscription:
     username: "{{ rhn_user }}"
     password: "{{ rhn_password }}"
