@@ -4,8 +4,8 @@
 # Set Satellite Scenario
 satellite_scenario: satellite
 
-# Change to true if you want this role to subscript/attach to your Satellite subscription.  
-rhn_registration: False
+# Registration enabled by default. Change to fale if you've already attached a subscription to your machine.  
+rhn_registration: True
 
 # Credentials used if rhn_registration is true.
 rhn_user: "CHANGEME"
@@ -57,8 +57,8 @@ firewall_ports:
   - 69/udp
 
 # List of software needed for installation.
-# Added another line if there are  additional packages
-# you would like to install.
+# Add another line if there are  additional packages
+# you would like to install during setup.
 
 needed_software:
   - satellite

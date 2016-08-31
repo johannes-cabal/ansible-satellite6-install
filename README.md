@@ -20,7 +20,8 @@ for the playbook to work properly. Follow the below steps.
 - Enter a name, the version of Satellite, and click Register
 - Select "Attach Subscription" and choose which subscription to attach
 - Select "Download Manifest" 
-- Place the zipped file under /files in the ansible6-installer role directory
+- Move manifest file into [role_name]/files/satellite_manifest.zip 
+
 
 Variables
 --------------
