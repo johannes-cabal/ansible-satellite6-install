@@ -1,4 +1,5 @@
-satellite6-installer
+Ansible atellite6-installer Role
+NOTE: This is currently a development version; not all functions will be in a working order
 =========
 
 This role is to install and provide basic configuration of Red Hat Satellite 6.2+ on a RHEL 7+ machine. 
