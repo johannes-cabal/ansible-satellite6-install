@@ -1,12 +1,13 @@
 ---
 # These tasks are to install Satellite through the CLI including answer files.
 
-- name: install_satellite | Copy satellite answer file
-  template: 
-    src: satellite-answers.yaml 
-    dest: /etc/foreman-installer/scenarios.d/satellite-answers.yaml
-  tags:
-  - install_satellite
+## TODO: Need to work on a new answer file
+#- name: install_satellite | Copy satellite answer file
+#  template: 
+#    src: satellite-answers.yaml 
+#    dest: /etc/foreman-installer/scenarios.d/satellite-answers.yaml
+#  tags:
+#  - install_satellite
 
 - name: install_satellite | Verify Foreman exists 
   stat: 

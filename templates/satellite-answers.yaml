@@ -3,7 +3,7 @@
     generate: true
     deploy: true
     group: foreman
-  katello: 
+  katello:
     package_names:
       - katello
       - tfm-rubygem-katello
@@ -26,29 +26,29 @@
     unattended: true
     admin_username: "{{ admin_user }}"
     admin_password: "{{ admin_passwd }}"
-  capsule:
-    register_in_foreman: true
-    pulp_master: true
-    puppet: true
-    puppetca: true
-    templates: false
-    tftp: true
-    tftp_servername: "{{ ip_address_sat }}"
-    bmc: false
-    bmc_default_provider: ipmitool
-    dhcp: true
-    dhcp_option_domain:
-      - "{{ dns_zone }}"
-    dhcp_interface: "{{ dhcp_mgmt_interface }}"
-    dhcp_gateway: "{{ gateway }}"
-    dhcp_range: "{{ dhcp_start }} {{ dhcp_end }}"
-    dhcp_nameservers: "{{ ip_address_sat }}"
-    dns: true
-    dns_zone: "{{ dns_zone }}"
-    dns_reverse: "{{ dns_reverse_zone }}"
-    dns_inteface: "{{ dns_interface }}"
-    dns_forwarders:
-      - "{{ forwarder_dns }}"
+  # capsule:
+  #   register_in_foreman: true
+  #   pulp_master: true
+  #   puppet: true
+  #   puppetca: true
+  #   templates: false
+  #   tftp: true
+  #   tftp_servername: "{{ ip_address_sat }}"
+  #   bmc: false
+  #   bmc_default_provider: ipmitool
+    # dhcp: true
+    # dhcp_option_domain:
+    #   - "{{ dns_zone }}"
+    # dhcp_interface: "{{ dhcp_mgmt_interface }}"
+    # dhcp_gateway: "{{ gateway }}"
+    # dhcp_range: "{{ dhcp_start }} {{ dhcp_end }}"
+    # dhcp_nameservers: "{{ ip_address_sat }}"
+    # dns: true
+    # dns_zone: "{{ dns_zone }}"
+    # dns_reverse: "{{ dns_reverse_zone }}"
+    # dns_inteface: "{{ dns_interface }}"
+    # dns_forwarders:
+    #   - "{{ forwarder_dns }}"
   "foreman::plugin::bootdisk": true
   "foreman::plugin::discovery": true
   "foreman::plugin::hooks": true
@@ -56,5 +56,5 @@
   "foreman::plugin::chef": false
   "foreman::plugin::default_hostgroup": false
   "foreman::plugin::puppetdb": false
-  "foreman::plugin::setup": false   
+  "foreman::plugin::setup": false
   "foreman::plugin::templates": false

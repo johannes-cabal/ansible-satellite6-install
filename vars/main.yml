@@ -113,5 +113,5 @@ repositories:
   - { product_name: 'Red Hat OpenStack', name_repo: 'Red Hat OpenStack Platform 8 director for RHEL 7 (RPMs)', rel: '7Server', architecture: 'x86_64', state: enable}
   - { product_name: 'Red Hat OpenStack', name_repo: 'Red Hat OpenStack Platform 8 for RHEL 7 (RPMs)', rel: '7Server', architecture: 'x86_64', state: enable}
   - { product_name: 'Red Hat OpenStack', name_repo: 'Red Hat OpenStack Platform 8 Operational Tools for RHEL 7 (RPMs)', rel: '7Server', architecture: 'x86_64', state: enable}
-  - { product_name: 'Red Hat Enterprise Linux Server', name_repo: 'Red Hat Satellite Tools '{{ satellite_version }}' (for RHEL 7 Server) (RPMs)', architecture: 'x86_64', state: enable}
+  - { product_name: 'Red Hat Enterprise Linux Server', name_repo: 'Red Hat Satellite Tools {{ satellite_version }} (for RHEL 7 Server) (RPMs)', architecture: 'x86_64', state: enable}
   - { product_name: 'Red Hat Enterprise Linux Server', name_repo: 'Red Hat Enterprise Linux 7 Server - Extras (RPMs)', architecture: 'x86_64', state: enable}

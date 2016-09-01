@@ -5,4 +5,4 @@
   when: rhn_registration
 - include: firewall.yml
 - include: install_software.yml
-#- include: install_satellite.yml
+- include: install_satellite.yml
