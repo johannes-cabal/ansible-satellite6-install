@@ -16,8 +16,7 @@
     - firewalld
 
 - name: firewall | Set hostname
-  hostname:
-    name: "{{ hostname_full }}"
+  command: hostnamectl set-hostname {{ hostname_full }}
 
 - name: firewall | Add hostname to /etc/hosts
   lineinfile:
