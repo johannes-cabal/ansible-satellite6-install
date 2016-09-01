@@ -3,7 +3,10 @@
     generate: true
     deploy: true
     group: foreman
-  katello: true
+  katello: 
+    package_names:
+      - katello
+      - tfm-rubygem-katello
   foreman:
     organizations_enabled: true
     locations_enabled: true
@@ -55,4 +58,3 @@
   "foreman::plugin::puppetdb": false
   "foreman::plugin::setup": false   
   "foreman::plugin::templates": false
-  "katello::plugin::gutterball": true

@@ -26,12 +26,18 @@
   tags:
     - hostname
 
-- name: firewall | Open ports via Firewalld
+- name: firewall | Enable ports in firewall 
   firewalld:
-    # service: "{{ item.0 }}"
     port: "{{ item }}"
     permanent: yes
     state: enabled
   with_items:
     - "{{ firewall_ports }}"
-    # - "{{ firewall_services }}"
+
+- name: firewall | Enable service in firewall 
+  firewalld:
+    service: "{{ item }}"
+    permanent: yes
+    state: enabled
+  with_items:
+    - "{{ firewall_services }}"

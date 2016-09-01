@@ -28,7 +28,7 @@ rhn_password: "CHANGEME"
 ##### SATELLITE CONFIGURATION VARIABLES #####
  ##########################################
 
-gateway: "10.10.1.30"
+gateway: "192.168.2.142"
 dhcp_mgmt_interface: "eth1"
 dhcp_name_server: ""
 dhcp_subnet: "10.10.1.0"
@@ -36,7 +36,7 @@ dhcp_start: "10.10.1.150"
 dhcp_end: "10.10.1.200"
 dhcp_mask: "255.255.255.0"
 dhcp_net_name: "10.10.1.X"
-ip_address_sat: "10.10.1.30"
+ip_address_sat: "192.168.2.142"
 forwarder_dns: "8.8.8.8"
 dns_interface: "eth1"
 dns_zone: "quebolon.local"
@@ -101,6 +101,7 @@ packages_list:
   - bash-completion
   - screen
   - vim-*
+  - chrony
 
  # List of repositories to be managed in Satellite
 repositories:
@@ -112,5 +113,5 @@ repositories:
   - { product_name: 'Red Hat OpenStack', name_repo: 'Red Hat OpenStack Platform 8 director for RHEL 7 (RPMs)', rel: '7Server', architecture: 'x86_64', state: enable}
   - { product_name: 'Red Hat OpenStack', name_repo: 'Red Hat OpenStack Platform 8 for RHEL 7 (RPMs)', rel: '7Server', architecture: 'x86_64', state: enable}
   - { product_name: 'Red Hat OpenStack', name_repo: 'Red Hat OpenStack Platform 8 Operational Tools for RHEL 7 (RPMs)', rel: '7Server', architecture: 'x86_64', state: enable}
-  - { product_name: 'Red Hat Enterprise Linux Server', name_repo: 'Red Hat Satellite Tools 6.1 (for RHEL 7 Server) (RPMs)', architecture: 'x86_64', state: enable}
+  - { product_name: 'Red Hat Enterprise Linux Server', name_repo: 'Red Hat Satellite Tools '{{ satellite_version }}' (for RHEL 7 Server) (RPMs)', architecture: 'x86_64', state: enable}
   - { product_name: 'Red Hat Enterprise Linux Server', name_repo: 'Red Hat Enterprise Linux 7 Server - Extras (RPMs)', architecture: 'x86_64', state: enable}
