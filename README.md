@@ -57,4 +57,4 @@ Josh Springer: <springer@redhat.com>, [GitHub](https://github.com/josh-springer)
 
 Contributors
 ------------------
-Glenn Snead <email@here.com>, [GitHub](https://github.com/<your-account>)
+Glenn Snead <glennsnead@gmail.com>, [GitHub](https://github.com/killroy1971)
