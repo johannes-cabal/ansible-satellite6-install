@@ -2,11 +2,19 @@ NOTE: This is currently a development version; not all functions will be in a wo
 
 Varriable Explanation
 =====================
+Satellite Answer File
+---------------------
+This assumes that you have installed Satellite 6 before and that you know which varriables
+to change.  The default answers will create a connected server "satellite.example.com." 
+
+TODO: Add varriables to configure DNS/DHCP/TFTP services.
+      Add varriables to set up oAuth or AD integration.
+
 Firewall Ports
 ---------------
 You can open ports using the built-in firewalld services in the first section,
 or you can open ports individually using the second section.
-Just don't use both at the same time.
+** Just don't use both at the same time. **
 By default, SSH and the basic Satellite server ports are opened using the firewall 
 services selections, and the one "Capsule" firewall ports 7911, 8000, and 8443 
 that aren't part of the RH-Satelite-6 service are opened individually.

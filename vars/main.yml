@@ -24,34 +24,6 @@ rhn_registration: True
 rhn_user: "CHANGEME"
 rhn_password: "CHANGEME"
 
-##########################################
-### SATELLITE CONFIGURATION VARIABLES  ###
-##########################################
-
-#Common variables
-satellite_initial_organization: "example_corp"
-satellite_initial_location: "home"
-satellite_admin_user: "admin"
-satellite_admin_passwd: "password"
-satelite_db_username: "foreman"
-satellite_db_password: "password"
-system_name: "satellite.example.com"
-system_name_http: "http://satellite.example.com:8000"
-system_name_https: "https://satellite.example.com"
-system_name_puppet: "https://satellite.example.com:8140"
-dns_tsig_principal_entry: "foremanproxy/satellite.internal@example.com.internal"
-
-#CA Certificates
-ca_country: "US"
-ca_state: "North Carolina"
-ca_city: "Raleigh"
-ca_org: "Katello"
-ca_org_unit: "example"
-ca_expiration: "36500"
-ca_server_cert: ""
-ca_server_cert_req: ""
-ca_server_ca_cert: ""
-
 ############################
 ##### FIREWALL VARIABLES #####
 ############################

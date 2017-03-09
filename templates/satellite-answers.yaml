@@ -31,18 +31,18 @@
   certs:
     log_dir: /var/log/certs
     node_fqdn: "{{ system_name }}"
-    generate: true
+    generate: "{{ ca_gen_certificate }}"
     regenerate: false
     regenerate_ca: false
     deploy: true
     ca_common_name: "{{ system_name }}"
-    country: US
-    state: "North Carolina"
-    city: Raleigh
-    org: Katello
-    org_unit: SomeOrgUnit
+    country: "{{ ca_country }}"
+    state: "{{ ca_state }}"
+    city: "{{ ca_city }}"
+    org: "{{ ca_org }}"
+    org_unit: "{{ ca_org_unit }}"
     expiration: "7300"
-    ca_expiration: "36500"
+    ca_expiration: "{{ ca_crt_organization }}"
     server_cert:
     server_key:
     server_cert_req:
@@ -52,8 +52,8 @@
     password_file_dir: "certs::params::password_file_dir"
     user: root
     group: foreman
-    default_ca_name: katello-default-ca
-    server_ca_name: katello-server-ca
+    default_ca_name: "{{ ca_default_name }}"
+    server_ca_name: "{{ ca_default_server_name }}"
   foreman:
     foreman_url: "{{ system_name_https }}"
     puppetrun: false

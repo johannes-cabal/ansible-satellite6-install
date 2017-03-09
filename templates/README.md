@@ -3,6 +3,6 @@ This satellite-answers.yml file was taken from a "connected" satellite installat
 does not run DNS, DHCP, or TFTP.  It does not use a proxy server.  It is not connected
 to external authentication, and it uses self-generated SSL certificates.
 
-Update the ../var/main.yml file to fit your environment.
+Update the ../var/answer-file.yml file to fit your environment.
 If you successfully enable one of the disabled services using these playbooks,
 please submit a pull request.
