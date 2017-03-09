@@ -53,6 +53,6 @@ BSD
 Author Information
 ------------------
 
-Josh Springer <springer@redhat.com>, [GitHub](https://github.com/josh-springer)
+Josh Springer: <springer@redhat.com>, [GitHub](https://github.com/josh-springer)
 
 
