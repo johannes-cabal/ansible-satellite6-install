@@ -25,7 +25,7 @@
   tags:
     - hostname
 
-- name: firewall | Enable ports in firewall 
+- name: firewall | Enable ports in firewall
   firewalld:
     port: "{{ item }}"
     permanent: yes
@@ -33,7 +33,7 @@
   with_items:
     - "{{ firewall_ports }}"
 
-- name: firewall | Enable service in firewall 
+- name: firewall | Enable service in firewall
   firewalld:
     service: "{{ item }}"
     permanent: yes
